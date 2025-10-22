@@ -18,7 +18,7 @@ This app demonstrates the following:
 
 ## Demo
 
-<iframe width="1000" height="562" src="https://www.youtube.com/embed/onxm4IYlgX8" title="Sample app demo | See the billing responses from purchase flows" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Sample app demo | See the billing responses from purchase flows](https://img.youtube.com/vi/onxm4IYlgX8/maxresdefault.jpg)](https://www.youtube.com/embed/onxm4IYlgX8)
 
 ## Codelab
 
