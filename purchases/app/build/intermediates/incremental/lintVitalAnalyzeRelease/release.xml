@@ -24,7 +24,7 @@
   <artifact
       classOutputs="build/intermediates/javac/release/compileReleaseJavaWithJavac/classes:build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/release/processReleaseResources/R.jar"
       type="MAIN"
-      applicationId="com.google.play.billing.samples.onetimepurchases"
+      applicationId="com.dynamic.sku.test.app"
       generatedSourceFolders="build/generated/ap_generated_sources/release/out"
       generatedResourceFolders="build/generated/third_party_licenses/release/res:build/generated/res/resValues/release"
       desugaredMethodsFiles="/Users/siddpadhi/.gradle/caches/8.11.1/transforms/ab24726a3ab65f66e69ef55b1a98c2c4/transformed/desugar_jdk_libs_configuration-2.1.5-desugar-lint.txt:/Users/siddpadhi/.gradle/caches/8.11.1/transforms/e01b5641b500180340f69702ff6957d9/transformed/D8BackportedDesugaredMethods.txt">

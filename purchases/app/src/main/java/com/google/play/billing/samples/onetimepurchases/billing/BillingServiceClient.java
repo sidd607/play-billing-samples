@@ -50,7 +50,6 @@ import java.util.Map;
 public class BillingServiceClient {
 
   private static final String TAG = "Billing Service Client";
-  private static final String CONSUMABLE_PRODUCT_PREFIX = "consumable_";
   private final BillingClient billingClient;
   private final AppCompatActivity activity;
   private final BillingServiceClientListener billingServiceClientListener;
@@ -61,14 +60,6 @@ public class BillingServiceClient {
         @Override
         public void onAcknowledgePurchaseResponse(BillingResult billingResult) {
           Log.i(TAG, "Acknowledge purchase response: " + billingResult.getResponseCode());
-        }
-      };
-
-  private final ConsumeResponseListener consumeResponseListener =
-      new ConsumeResponseListener() {
-        @Override
-        public void onConsumeResponse(BillingResult billingResult, String purchaseToken) {
-          Log.i(TAG, "Consume response: " + billingResult.getResponseCode());
         }
       };
 
@@ -156,8 +147,31 @@ public class BillingServiceClient {
     for (String productId : productIds) {
       ProductDetails productDetails = productDetailsMap.get(productId);
       if (productDetails != null) {
-        productDetailsParamsListBuilder.add(
-            ProductDetailsParams.newBuilder().setProductDetails(productDetails).build());
+        ProductDetailsParams.Builder paramsBuilder =
+            ProductDetailsParams.newBuilder().setProductDetails(productDetails);
+
+        // For subscriptions, we must provide an offerToken.
+        // We prefer the monthly plan (P1M) to match the UI.
+        if (productDetails.getProductType().equals(BillingClient.ProductType.SUBS)
+            && productDetails.getSubscriptionOfferDetails() != null) {
+          for (ProductDetails.SubscriptionOfferDetails offerDetails :
+              productDetails.getSubscriptionOfferDetails()) {
+            boolean isMonthly = false;
+            for (ProductDetails.PricingPhase phase :
+                offerDetails.getPricingPhases().getPricingPhaseList()) {
+              if ("P1M".equals(phase.getBillingPeriod())) {
+                isMonthly = true;
+                break;
+              }
+            }
+            if (isMonthly) {
+              paramsBuilder.setOfferToken(offerDetails.getOfferToken());
+              break;
+            }
+          }
+        }
+
+        productDetailsParamsListBuilder.add(paramsBuilder.build());
       } else {
         Log.e(
             TAG,
@@ -226,26 +240,16 @@ public class BillingServiceClient {
     // Step 4: Notify Google the purchase was processed.
     // For one-time products, acknowledge the purchase.
     // This sample app (client-only) uses billingClient.acknowledgePurchase().
-    // For consumable one-time products, consume the purchase
-    // This sample app (client-only) uses billingClient.consumeAsync()
     // If you have a secure backend, you must acknowledge purchases on your server using the
     // server-side API.
     // See https://developer.android.com/google/play/billing/security#acknowledge
     if (purchase.getPurchaseState() == PurchaseState.PURCHASED && !purchase.isAcknowledged()) {
-
-      if (shouldConsume(purchase)) {
-        ConsumeParams consumeParams =
-            ConsumeParams.newBuilder().setPurchaseToken(purchase.getPurchaseToken()).build();
-        billingClient.consumeAsync(consumeParams, consumeResponseListener);
-
-      } else {
         AcknowledgePurchaseParams acknowledgePurchaseParams =
             AcknowledgePurchaseParams.newBuilder()
                 .setPurchaseToken(purchase.getPurchaseToken())
                 .build();
         billingClient.acknowledgePurchase(
             acknowledgePurchaseParams, acknowledgePurchaseResponseListener);
-      }
     }
   }
 
@@ -269,18 +273,5 @@ public class BillingServiceClient {
             billingServiceClientListener.onProductDetailsFetched(productDetailsMap);
           }
         });
-  }
-
-  /**
-   * Determines if a purchase should be consumed. **Note:** This implementation is provided as an
-   * example. Developers should implement their specific business logic to accurately determine if a
-   * purchase should be consumed.
-   *
-   * @param purchase The purchase to check.
-   * @return True if the purchase should be consumed, false otherwise.
-   */
-  private boolean shouldConsume(Purchase purchase) {
-    return purchase.getProducts().stream()
-        .allMatch(productId -> productId.startsWith(CONSUMABLE_PRODUCT_PREFIX));
   }
 }

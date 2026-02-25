@@ -425,7 +425,7 @@ ADDED from [androidx.core:core:1.13.0] /Users/siddpadhi/.gradle/caches/8.11.1/tr
 		ADDED from [androidx.core:core:1.13.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/f58cbdc16bd70274fa2eb01c10797f58/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.13.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/f58cbdc16bd70274fa2eb01c10797f58/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
-permission#com.google.play.billing.samples.onetimepurchases.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#com.dynamic.sku.test.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/f58cbdc16bd70274fa2eb01c10797f58/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.13.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/f58cbdc16bd70274fa2eb01c10797f58/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
@@ -435,7 +435,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/f58cbdc16bd70274fa2eb01c10797f58/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.13.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/f58cbdc16bd70274fa2eb01c10797f58/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
-uses-permission#com.google.play.billing.samples.onetimepurchases.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#com.dynamic.sku.test.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/f58cbdc16bd70274fa2eb01c10797f58/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.13.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/f58cbdc16bd70274fa2eb01c10797f58/transformed/core-1.13.0/AndroidManifest.xml:26:22-94

@@ -36,9 +36,6 @@
   public static j$.util.stream.Stream $default$stream(java.util.Collection);
   public static java.lang.Object[] $default$toArray(java.util.Collection,java.util.function.IntFunction);
 }
--keep class j$.util.Collection$-EL {
-  public static j$.util.stream.Stream stream(java.util.Collection);
-}
 -keep interface j$.util.Comparator {
   public java.util.Comparator reversed();
   public java.util.Comparator thenComparing(java.util.Comparator);
@@ -201,11 +198,6 @@
   public static java.util.function.Function $default$andThen(java.util.function.Function,java.util.function.Function);
   public static java.util.function.Function $default$compose(java.util.function.Function,java.util.function.Function);
 }
--keep class j$.util.function.Predicate$-CC {
-  public static java.util.function.Predicate $default$and(java.util.function.Predicate,java.util.function.Predicate);
-  public static java.util.function.Predicate $default$negate(java.util.function.Predicate);
-  public static java.util.function.Predicate $default$or(java.util.function.Predicate,java.util.function.Predicate);
-}
 -keep interface j$.util.stream.BaseStream {
   public void close();
   public java.util.Iterator iterator();
@@ -234,7 +226,6 @@
   public long[] toArray();
 }
 -keep interface j$.util.stream.Stream {
-  public boolean allMatch(java.util.function.Predicate);
   public java.lang.Object collect(j$.util.stream.Collector);
 }
 -keep class j$.util.stream.Stream$Wrapper {

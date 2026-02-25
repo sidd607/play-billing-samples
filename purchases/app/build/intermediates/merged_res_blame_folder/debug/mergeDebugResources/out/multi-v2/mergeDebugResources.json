@@ -951,9 +951,12 @@
                 {
                     "source": "/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/res/values/themes.xml",
                     "from": {
-                        "startLines": "-1,-1,-1",
-                        "startColumns": "-1,-1,-1",
-                        "startOffsets": "-1,-1,-1"
+                        "startLines": "16,51,-1",
+                        "startColumns": "4,4,-1",
+                        "startOffsets": "720,2515,-1",
+                        "endLines": "38,57,-1",
+                        "endColumns": "12,12,-1",
+                        "endOffsets": "2038,2889,-1"
                     },
                     "to": {
                         "startLines": "2216,9343,9350",
@@ -1227,11 +1230,9 @@
                 {
                     "source": "/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/res/values/strings.xml",
                     "from": {
-                        "startLines": "-1,-1,-1,-1,22,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
-                        "startColumns": "-1,-1,-1,-1,4,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
-                        "startOffsets": "-1,-1,-1,-1,958,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
-                        "endColumns": "-1,-1,-1,-1,106,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
-                        "endOffsets": "-1,-1,-1,-1,1060,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
                         "startLines": "2003,2011,2023,2024,2043,2044,2052,2053,2060,2168,2169,2171,2172,2173,2180",

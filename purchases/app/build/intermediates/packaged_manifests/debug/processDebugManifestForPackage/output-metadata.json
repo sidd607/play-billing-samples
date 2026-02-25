@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.google.play.billing.samples.onetimepurchases",
+  "applicationId": "com.dynamic.sku.test.app",
   "variantName": "debug",
   "elements": [
     {

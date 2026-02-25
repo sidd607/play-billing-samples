@@ -14,8 +14,6 @@
  */
 package com.google.play.billing.samples.onetimepurchases;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -30,7 +28,6 @@ import com.android.billingclient.api.BillingClient.ProductType;
 import com.android.billingclient.api.BillingResult;
 import com.android.billingclient.api.ProductDetails;
 import com.android.billingclient.api.QueryProductDetailsParams.Product;
-import com.google.android.gms.oss.licenses.OssLicensesMenuActivity;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -39,7 +36,6 @@ import com.google.common.collect.ImmutableList;
 import com.google.play.billing.samples.onetimepurchases.billing.BillingServiceClient;
 import com.google.play.billing.samples.onetimepurchases.billing.BillingServiceClientListener;
 import java.util.Map;
-import java.util.Objects;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.ArrayList;
@@ -51,23 +47,33 @@ public class MainActivity extends AppCompatActivity implements BillingServiceCli
 
   private BillingServiceClient billingServiceClient;
   private final Set<String> selectedProductIds = new HashSet<>();
-  private static final String CONSUMABLE_PRODUCT_01 = "consumable_product_01";
-  private static final String CONSUMABLE_PRODUCT_02 = "consumable_product_020";
-  private static final String CONSUMABLE_PRODUCT_03 = "consumable_product_03";
+  private static final String SUBS_PRODUCT_01 = "sidd607_subs";
+  private static final String SUBS_PRODUCT_02 = "sidd607_subs_premium";
+  private static final String ADDON_SUBS_PRODUCT_01 = "kids_package";
+    private static final String ADDON_SUBS_PRODUCT_02 = "news_package";
+    private static final String ADDON_SUBS_PRODUCT_03 = "sports_package";
 
   private static final ImmutableList<Product> PRODUCT_LIST =
       ImmutableList.of(
           Product.newBuilder()
-              .setProductId(CONSUMABLE_PRODUCT_01)
-              .setProductType(ProductType.INAPP)
+              .setProductId(SUBS_PRODUCT_01)
+              .setProductType(ProductType.SUBS)
               .build(),
           Product.newBuilder()
-              .setProductId(CONSUMABLE_PRODUCT_02)
-              .setProductType(ProductType.INAPP)
+              .setProductId(SUBS_PRODUCT_02)
+              .setProductType(ProductType.SUBS)
               .build(),
           Product.newBuilder()
-              .setProductId(CONSUMABLE_PRODUCT_03)
-              .setProductType(ProductType.INAPP)
+              .setProductId(ADDON_SUBS_PRODUCT_01)
+              .setProductType(ProductType.SUBS)
+              .build(),
+          Product.newBuilder()
+              .setProductId(ADDON_SUBS_PRODUCT_02)
+              .setProductType(ProductType.SUBS)
+              .build(),
+          Product.newBuilder()
+              .setProductId(ADDON_SUBS_PRODUCT_03)
+              .setProductType(ProductType.SUBS)
               .build());
 
   @Override
@@ -143,12 +149,23 @@ public class MainActivity extends AppCompatActivity implements BillingServiceCli
 
         // Update views with product details
         titleView.setText(productDetails.getName());
-        descView.setText(productDetails.getDescription());
+        descView.setText(productDetails.getDescription().strip().replace("\n", ""));
 
         productImageView.setImageResource(getDrawableProductImageForProductId(productId));
 
-        String formattedPrice =
-                Objects.requireNonNull(productDetails.getOneTimePurchaseOfferDetails()).getFormattedPrice();
+        String formattedPrice = "";
+        if (productDetails.getSubscriptionOfferDetails() != null) {
+            for (ProductDetails.SubscriptionOfferDetails offerDetails : productDetails.getSubscriptionOfferDetails()) {
+                // Look for the monthly plan (P1M)
+                for (ProductDetails.PricingPhase phase : offerDetails.getPricingPhases().getPricingPhaseList()) {
+                    if ("P1M".equals(phase.getBillingPeriod())) {
+                        formattedPrice = phase.getFormattedPrice();
+                        break;
+                    }
+                }
+                if (!formattedPrice.isEmpty()) break;
+            }
+        }
         priceView.setText(formattedPrice);
 
         cardView.setOnClickListener(v -> {
@@ -183,32 +200,51 @@ public class MainActivity extends AppCompatActivity implements BillingServiceCli
   public void onProductDetailsFetched(Map<String, ProductDetails> productDetailsMap) {
       runOnUiThread(
               () -> {
-                  LinearLayout container = findViewById(R.id.dynamic_product_list);
+                  LinearLayout basePlansContainer = findViewById(R.id.base_plans_container);
+                  LinearLayout addOnsContainer = findViewById(R.id.add_ons_container);
+                  TextView basePlansHeader = findViewById(R.id.base_plans_header);
+                  TextView addOnsHeader = findViewById(R.id.add_ons_header);
                   TextView noProductsText = findViewById(R.id.no_products_text);
-                  container.removeAllViews();
+
+                  basePlansContainer.removeAllViews();
+                  addOnsContainer.removeAllViews();
                   selectedProductIds.clear();
                   updateBuyButton();
 
                   if (productDetailsMap.isEmpty()) {
                       noProductsText.setVisibility(View.VISIBLE);
+                      basePlansHeader.setVisibility(View.GONE);
+                      addOnsHeader.setVisibility(View.GONE);
                   } else {
                       noProductsText.setVisibility(View.GONE);
                       LayoutInflater inflater = LayoutInflater.from(this);
+                      boolean hasBasePlans = false;
+                      boolean hasAddOns = false;
+
                       for (ProductDetails productDetails : productDetailsMap.values()) {
-                          View cardView = inflater.inflate(R.layout.product_card, container, false);
+                          String productId = productDetails.getProductId();
+                          boolean isBasePlan = productId.startsWith("sidd607_subs");
+                          LinearLayout targetContainer = isBasePlan ? basePlansContainer : addOnsContainer;
+                          
+                          View cardView = inflater.inflate(R.layout.product_card, targetContainer, false);
                           updateProductCardUI(cardView, productDetails);
-                          container.addView(cardView);
+                          targetContainer.addView(cardView);
+                          
+                          if (isBasePlan) hasBasePlans = true;
+                          else hasAddOns = true;
                       }
+
+                      basePlansHeader.setVisibility(hasBasePlans ? View.VISIBLE : View.GONE);
+                      addOnsHeader.setVisibility(hasAddOns ? View.VISIBLE : View.GONE);
                   }
               });
   }
 
   private int getDrawableProductImageForProductId(String productId) {
       return switch (productId) {
-        case CONSUMABLE_PRODUCT_01 -> R.drawable.consumable_product_01;
-        case CONSUMABLE_PRODUCT_02 -> R.drawable.consumable_product_02;
-        case CONSUMABLE_PRODUCT_03 -> R.drawable.consumable_product_03;
-        default -> 0;
+        case SUBS_PRODUCT_02 -> R.drawable.consumable_product_02;
+        case ADDON_SUBS_PRODUCT_01 -> R.drawable.consumable_product_03;
+        default -> R.drawable.consumable_product_01;
       };
   }
 }

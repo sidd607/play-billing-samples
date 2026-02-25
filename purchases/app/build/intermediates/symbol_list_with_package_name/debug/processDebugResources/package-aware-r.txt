@@ -3238,6 +3238,8 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_ons_container
+id add_ons_header
 id adjust_height
 id adjust_width
 id alertTitle
@@ -3260,6 +3262,8 @@ id axisRelative
 id banner_image
 id banner_text
 id barrier
+id base_plans_container
+id base_plans_header
 id baseline
 id beginOnFirstDraw
 id beginning
@@ -3341,7 +3345,6 @@ id dragRight
 id dragStart
 id dragUp
 id dropdown_menu
-id dynamic_product_list
 id easeIn
 id easeInOut
 id easeOut
@@ -3540,10 +3543,12 @@ id pin
 id position
 id postLayout
 id pressed
+id price_container
 id product_container
 id product_description
 id product_image
 id product_list
+id product_period
 id product_price
 id product_title
 id progress_circular
