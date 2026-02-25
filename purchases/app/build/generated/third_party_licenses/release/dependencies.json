@@ -1,0 +1,447 @@
+[
+    {
+        "group": "com.google.android.gms",
+        "version": "17.0.0",
+        "name": "play-services-places-placereport"
+    },
+    {
+        "group": "com.google.android.gms",
+        "version": "17.1.0",
+        "name": "play-services-oss-licenses"
+    },
+    {
+        "group": "com.google.firebase",
+        "version": "17.0.0",
+        "name": "firebase-encoders"
+    },
+    {
+        "group": "androidx.recyclerview",
+        "version": "1.1.0",
+        "name": "recyclerview"
+    },
+    {
+        "group": "androidx.cursoradapter",
+        "version": "1.0.0",
+        "name": "cursoradapter"
+    },
+    {
+        "group": "androidx.savedstate",
+        "version": "1.2.1",
+        "name": "savedstate"
+    },
+    {
+        "group": "androidx.cardview",
+        "version": "1.0.0",
+        "name": "cardview"
+    },
+    {
+        "group": "androidx.versionedparcelable",
+        "version": "1.1.1",
+        "name": "versionedparcelable"
+    },
+    {
+        "group": "org.jetbrains.kotlin",
+        "version": "2.1.10",
+        "name": "kotlin-stdlib-jdk8"
+    },
+    {
+        "group": "org.jetbrains.kotlin",
+        "version": "2.1.10",
+        "name": "kotlin-stdlib-jdk7"
+    },
+    {
+        "group": "org.jetbrains.kotlinx",
+        "version": "1.7.3",
+        "name": "kotlinx-coroutines-bom"
+    },
+    {
+        "group": "androidx.startup",
+        "version": "1.1.1",
+        "name": "startup-runtime"
+    },
+    {
+        "group": "androidx.lifecycle",
+        "version": "2.6.2",
+        "name": "lifecycle-livedata"
+    },
+    {
+        "group": "androidx.customview",
+        "version": "1.1.0",
+        "name": "customview"
+    },
+    {
+        "group": "com.google.guava",
+        "version": "1.0.1",
+        "name": "failureaccess"
+    },
+    {
+        "group": "com.google.android.datatransport",
+        "version": "3.0.0",
+        "name": "transport-api"
+    },
+    {
+        "group": "androidx.test.ext",
+        "version": "1.2.1",
+        "name": "junit"
+    },
+    {
+        "group": "org.jetbrains",
+        "version": "23.0.0",
+        "name": "annotations"
+    },
+    {
+        "group": "androidx.emoji2",
+        "version": "1.3.0",
+        "name": "emoji2-views-helper"
+    },
+    {
+        "group": "androidx.lifecycle",
+        "version": "2.6.2",
+        "name": "lifecycle-viewmodel-savedstate"
+    },
+    {
+        "group": "androidx.profileinstaller",
+        "version": "1.4.0",
+        "name": "profileinstaller"
+    },
+    {
+        "group": "androidx.compose.runtime",
+        "version": "1.8.3",
+        "name": "runtime-android"
+    },
+    {
+        "group": "org.jetbrains.kotlin",
+        "version": "2.1.10",
+        "name": "kotlin-stdlib-common"
+    },
+    {
+        "group": "androidx.collection",
+        "version": "1.5.0",
+        "name": "collection-jvm"
+    },
+    {
+        "group": "androidx.coordinatorlayout",
+        "version": "1.1.0",
+        "name": "coordinatorlayout"
+    },
+    {
+        "group": "com.google.android.gms",
+        "version": "19.0.0",
+        "name": "play-services-location"
+    },
+    {
+        "group": "androidx.annotation",
+        "version": "1.9.1",
+        "name": "annotation"
+    },
+    {
+        "group": "androidx.viewpager",
+        "version": "1.0.0",
+        "name": "viewpager"
+    },
+    {
+        "group": "androidx.test",
+        "version": "1.7.1",
+        "name": "monitor"
+    },
+    {
+        "group": "androidx.viewpager2",
+        "version": "1.0.0",
+        "name": "viewpager2"
+    },
+    {
+        "group": "org.checkerframework",
+        "version": "3.12.0",
+        "name": "checker-qual"
+    },
+    {
+        "group": "androidx.emoji2",
+        "version": "1.3.0",
+        "name": "emoji2"
+    },
+    {
+        "group": "org.jetbrains.kotlinx",
+        "version": "1.7.3",
+        "name": "kotlinx-coroutines-core-jvm"
+    },
+    {
+        "group": "org.jetbrains.kotlinx",
+        "version": "1.7.3",
+        "name": "kotlinx-coroutines-android"
+    },
+    {
+        "group": "androidx.lifecycle",
+        "version": "2.6.2",
+        "name": "lifecycle-process"
+    },
+    {
+        "group": "com.google.guava",
+        "version": "9999.0-empty-to-avoid-conflict-with-guava",
+        "name": "listenablefuture"
+    },
+    {
+        "group": "com.google.firebase",
+        "version": "16.0.0",
+        "name": "firebase-encoders-proto"
+    },
+    {
+        "group": "androidx.dynamicanimation",
+        "version": "1.0.0",
+        "name": "dynamicanimation"
+    },
+    {
+        "group": "com.google.android.material",
+        "version": "1.12.0",
+        "name": "material"
+    },
+    {
+        "group": "androidx.drawerlayout",
+        "version": "1.1.1",
+        "name": "drawerlayout"
+    },
+    {
+        "group": "androidx.vectordrawable",
+        "version": "1.1.0",
+        "name": "vectordrawable-animated"
+    },
+    {
+        "group": "org.jetbrains.kotlinx",
+        "version": "1.7.3",
+        "name": "kotlinx-coroutines-core"
+    },
+    {
+        "group": "androidx.annotation",
+        "version": "1.4.1",
+        "name": "annotation-experimental"
+    },
+    {
+        "group": "com.google.android.datatransport",
+        "version": "3.1.8",
+        "name": "transport-runtime"
+    },
+    {
+        "group": "javax.inject",
+        "version": "1",
+        "name": "javax.inject"
+    },
+    {
+        "group": "androidx.test.services",
+        "version": "1.5.0",
+        "name": "storage"
+    },
+    {
+        "group": "androidx.arch.core",
+        "version": "2.2.0",
+        "name": "core-common"
+    },
+    {
+        "group": "androidx.concurrent",
+        "version": "1.1.0",
+        "name": "concurrent-futures-ktx"
+    },
+    {
+        "group": "com.google.errorprone",
+        "version": "2.15.0",
+        "name": "error_prone_annotations"
+    },
+    {
+        "group": "androidx.annotation",
+        "version": "1.9.1",
+        "name": "annotation-jvm"
+    },
+    {
+        "group": "androidx.vectordrawable",
+        "version": "1.1.0",
+        "name": "vectordrawable"
+    },
+    {
+        "group": "org.hamcrest",
+        "version": "1.3",
+        "name": "hamcrest-core"
+    },
+    {
+        "group": "androidx.lifecycle",
+        "version": "2.6.2",
+        "name": "lifecycle-livedata-core"
+    },
+    {
+        "group": "androidx.constraintlayout",
+        "version": "1.1.1",
+        "name": "constraintlayout-core"
+    },
+    {
+        "group": "androidx.print",
+        "version": "1.0.0",
+        "name": "print"
+    },
+    {
+        "group": "androidx.tracing",
+        "version": "1.1.0",
+        "name": "tracing"
+    },
+    {
+        "group": "org.jetbrains.kotlin",
+        "version": "2.1.10",
+        "name": "kotlin-stdlib"
+    },
+    {
+        "group": "junit",
+        "version": "4.13.2",
+        "name": "junit"
+    },
+    {
+        "group": "androidx.arch.core",
+        "version": "2.2.0",
+        "name": "core-runtime"
+    },
+    {
+        "group": "com.android.billingclient",
+        "version": "8.1.0",
+        "name": "billing"
+    },
+    {
+        "group": "com.google.code.findbugs",
+        "version": "3.0.2",
+        "name": "jsr305"
+    },
+    {
+        "group": "com.google.firebase",
+        "version": "18.0.0",
+        "name": "firebase-encoders-json"
+    },
+    {
+        "group": "com.google.j2objc",
+        "version": "1.3",
+        "name": "j2objc-annotations"
+    },
+    {
+        "group": "androidx.transition",
+        "version": "1.5.0",
+        "name": "transition"
+    },
+    {
+        "group": "com.google.guava",
+        "version": "31.1-android",
+        "name": "guava"
+    },
+    {
+        "group": "com.google.android.gms",
+        "version": "18.2.0",
+        "name": "play-services-tasks"
+    },
+    {
+        "group": "androidx.lifecycle",
+        "version": "2.6.2",
+        "name": "lifecycle-runtime"
+    },
+    {
+        "group": "com.google.android.datatransport",
+        "version": "3.1.8",
+        "name": "transport-backend-cct"
+    },
+    {
+        "group": "androidx.constraintlayout",
+        "version": "2.2.1",
+        "name": "constraintlayout"
+    },
+    {
+        "group": "androidx.interpolator",
+        "version": "1.0.0",
+        "name": "interpolator"
+    },
+    {
+        "group": "androidx.localbroadcastmanager",
+        "version": "1.0.0",
+        "name": "localbroadcastmanager"
+    },
+    {
+        "group": "androidx.documentfile",
+        "version": "1.0.0",
+        "name": "documentfile"
+    },
+    {
+        "group": "androidx.loader",
+        "version": "1.0.0",
+        "name": "loader"
+    },
+    {
+        "group": "androidx.lifecycle",
+        "version": "2.6.2",
+        "name": "lifecycle-common"
+    },
+    {
+        "group": "androidx.core",
+        "version": "1.13.0",
+        "name": "core"
+    },
+    {
+        "group": "androidx.appcompat",
+        "version": "1.7.0",
+        "name": "appcompat"
+    },
+    {
+        "group": "org.jetbrains.kotlin",
+        "version": "2.1.10",
+        "name": "kotlin-bom"
+    },
+    {
+        "group": "androidx.legacy",
+        "version": "1.0.0",
+        "name": "legacy-support-core-utils"
+    },
+    {
+        "group": "androidx.collection",
+        "version": "1.5.0",
+        "name": "collection"
+    },
+    {
+        "group": "androidx.test",
+        "version": "1.6.1",
+        "name": "core"
+    },
+    {
+        "group": "androidx.resourceinspection",
+        "version": "1.0.1",
+        "name": "resourceinspection-annotation"
+    },
+    {
+        "group": "androidx.core",
+        "version": "1.13.0",
+        "name": "core-ktx"
+    },
+    {
+        "group": "androidx.lifecycle",
+        "version": "2.6.2",
+        "name": "lifecycle-viewmodel"
+    },
+    {
+        "group": "com.google.android.gms",
+        "version": "18.5.0",
+        "name": "play-services-base"
+    },
+    {
+        "group": "com.google.android.gms",
+        "version": "18.9.0",
+        "name": "play-services-basement"
+    },
+    {
+        "group": "androidx.concurrent",
+        "version": "1.1.0",
+        "name": "concurrent-futures"
+    },
+    {
+        "group": "androidx.fragment",
+        "version": "1.5.4",
+        "name": "fragment"
+    },
+    {
+        "group": "androidx.appcompat",
+        "version": "1.7.0",
+        "name": "appcompat-resources"
+    },
+    {
+        "group": "androidx.activity",
+        "version": "1.8.0",
+        "name": "activity"
+    }
+]

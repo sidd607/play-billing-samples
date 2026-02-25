@@ -141,18 +141,37 @@ public class BillingServiceClient {
    * @param productId The product ID of the product to purchase.
    */
   public void launchBillingFlow(String productId) {
-    ProductDetails productDetails = productDetailsMap.get(productId);
-    if (productDetails == null) {
-      Log.e(
-          TAG, "Cannot launch billing flow: ProductDetails not found for productId: " + productId);
-      billingServiceClientListener.onBillingResponse(
-          BillingResponseCode.ITEM_UNAVAILABLE,
-          BillingResult.newBuilder().setResponseCode(BillingResponseCode.ITEM_UNAVAILABLE).build());
+    launchBillingFlow(ImmutableList.of(productId));
+  }
+
+  /**
+   * Launches the billing flow for the products with the given product IDs.
+   *
+   * @param productIds The list of product IDs of the products to purchase.
+   */
+  public void launchBillingFlow(List<String> productIds) {
+    ImmutableList.Builder<ProductDetailsParams> productDetailsParamsListBuilder =
+        ImmutableList.builder();
+
+    for (String productId : productIds) {
+      ProductDetails productDetails = productDetailsMap.get(productId);
+      if (productDetails != null) {
+        productDetailsParamsListBuilder.add(
+            ProductDetailsParams.newBuilder().setProductDetails(productDetails).build());
+      } else {
+        Log.e(
+            TAG,
+            "Cannot launch billing flow: ProductDetails not found for productId: " + productId);
+      }
+    }
+
+    ImmutableList<ProductDetailsParams> productDetailsParamsList =
+        productDetailsParamsListBuilder.build();
+
+    if (productDetailsParamsList.isEmpty()) {
+      Log.e(TAG, "Cannot launch billing flow: No valid products found.");
       return;
     }
-    ImmutableList<ProductDetailsParams> productDetailsParamsList =
-        ImmutableList.of(
-            ProductDetailsParams.newBuilder().setProductDetails(productDetails).build());
 
     BillingFlowParams billingFlowParams =
         BillingFlowParams.newBuilder()

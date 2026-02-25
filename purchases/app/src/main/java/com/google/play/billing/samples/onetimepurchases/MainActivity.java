@@ -32,6 +32,7 @@ import com.android.billingclient.api.ProductDetails;
 import com.android.billingclient.api.QueryProductDetailsParams.Product;
 import com.google.android.gms.oss.licenses.OssLicensesMenuActivity;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.google.common.collect.ImmutableList;
@@ -39,22 +40,23 @@ import com.google.play.billing.samples.onetimepurchases.billing.BillingServiceCl
 import com.google.play.billing.samples.onetimepurchases.billing.BillingServiceClientListener;
 import java.util.Map;
 import java.util.Objects;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.ArrayList;
+import android.widget.LinearLayout;
+import android.view.LayoutInflater;
 
 /** This is the main activity class */
 public class MainActivity extends AppCompatActivity implements BillingServiceClientListener {
 
   private BillingServiceClient billingServiceClient;
-  private static final String ONE_TIME_PRODUCT_01 = "one_time_product_01";
+  private final Set<String> selectedProductIds = new HashSet<>();
   private static final String CONSUMABLE_PRODUCT_01 = "consumable_product_01";
-  private static final String CONSUMABLE_PRODUCT_02 = "consumable_product_02";
+  private static final String CONSUMABLE_PRODUCT_02 = "consumable_product_020";
   private static final String CONSUMABLE_PRODUCT_03 = "consumable_product_03";
 
   private static final ImmutableList<Product> PRODUCT_LIST =
       ImmutableList.of(
-          Product.newBuilder()
-              .setProductId(ONE_TIME_PRODUCT_01)
-              .setProductType(ProductType.INAPP)
-              .build(),
           Product.newBuilder()
               .setProductId(CONSUMABLE_PRODUCT_01)
               .setProductType(ProductType.INAPP)
@@ -73,43 +75,34 @@ public class MainActivity extends AppCompatActivity implements BillingServiceCli
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    final View bannerText = findViewById(R.id.product_list);
-    final MotionLayout motionLayout = (MotionLayout) bannerText.getParent();
+    final MotionLayout motionLayout = findViewById(R.id.motion_layout);
     ViewCompat.setOnApplyWindowInsetsListener(
             motionLayout,
             (v, windowInsets) -> {
               Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
               int statusBarHeight = insets.top;
 
+              ConstraintSet startSet = motionLayout.getConstraintSet(R.id.start);
+              startSet.setMargin(R.id.product_list, ConstraintSet.TOP, statusBarHeight);
+              motionLayout.updateState(R.id.start, startSet);
+
               ConstraintSet endSet = motionLayout.getConstraintSet(R.id.end);
               endSet.setMargin(R.id.product_list, ConstraintSet.TOP, statusBarHeight);
-
               motionLayout.updateState(R.id.end, endSet);
+
               return WindowInsetsCompat.CONSUMED;
             });
-
-    MaterialButton githubButton = findViewById(R.id.github_button);
-    githubButton.setOnClickListener(v -> {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(getString(R.string.github_url)));
-        startActivity(intent);
-    });
-
-    MaterialButton codelabButton = findViewById(R.id.codelab_button);
-    codelabButton.setOnClickListener(v -> {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(getString(R.string.codelab_url)));
-        startActivity(intent);
-    });
-
-    MaterialButton licensesButton = findViewById(R.id.licenses_button);
-    licensesButton.setOnClickListener(v -> {
-        startActivity(new Intent(this, OssLicensesMenuActivity.class));
-    });
 
     // Setup Billing Client
     billingServiceClient = new BillingServiceClient(this, this);
     billingServiceClient.startBillingConnection(PRODUCT_LIST);
+
+    MaterialButton buyAllButton = findViewById(R.id.buy_all_button);
+    buyAllButton.setOnClickListener(v -> {
+        if (!selectedProductIds.isEmpty()) {
+            billingServiceClient.launchBillingFlow(new ArrayList<>(selectedProductIds));
+        }
+    });
 
   }
 
@@ -138,18 +131,14 @@ public class MainActivity extends AppCompatActivity implements BillingServiceCli
     billingServiceClient.endBillingConnection();
   }
 
-    private void updateProductCardUI(ProductDetails productDetails) {
+    private void updateProductCardUI(View cardView, ProductDetails productDetails) {
 
         String productId = productDetails.getProductId();
 
-        String cardIdName = "product_" + productId;
-        int cardResId = getResources().getIdentifier(cardIdName, "id", getPackageName());
-
-        // Find views by their resource IDs
-        View cardView = findViewById(cardResId);
+        // Find views within the provided cardView
         TextView titleView = cardView.findViewById(R.id.product_title);
         TextView descView = cardView.findViewById(R.id.product_description);
-        MaterialButton buyButton = cardView.findViewById(R.id.buy_button);
+        TextView priceView = cardView.findViewById(R.id.product_price);
         ShapeableImageView productImageView = cardView.findViewById(R.id.product_image);
 
         // Update views with product details
@@ -160,8 +149,29 @@ public class MainActivity extends AppCompatActivity implements BillingServiceCli
 
         String formattedPrice =
                 Objects.requireNonNull(productDetails.getOneTimePurchaseOfferDetails()).getFormattedPrice();
-        buyButton.setText(formattedPrice);
-        buyButton.setOnClickListener(v -> billingServiceClient.launchBillingFlow(productId));
+        priceView.setText(formattedPrice);
+
+        cardView.setOnClickListener(v -> {
+            MaterialCardView card = (MaterialCardView) cardView;
+            boolean isChecked = !card.isChecked();
+            card.setChecked(isChecked);
+            if (isChecked) {
+                selectedProductIds.add(productId);
+            } else {
+                selectedProductIds.remove(productId);
+            }
+            updateBuyButton();
+        });
+    }
+
+    private void updateBuyButton() {
+        MaterialButton buyAllButton = findViewById(R.id.buy_all_button);
+        if (selectedProductIds.isEmpty()) {
+            buyAllButton.setVisibility(View.GONE);
+        } else {
+            buyAllButton.setVisibility(View.VISIBLE);
+            buyAllButton.setText("Buy Selected (" + selectedProductIds.size() + ")");
+        }
     }
 
   @Override
@@ -173,15 +183,28 @@ public class MainActivity extends AppCompatActivity implements BillingServiceCli
   public void onProductDetailsFetched(Map<String, ProductDetails> productDetailsMap) {
       runOnUiThread(
               () -> {
-                  for (ProductDetails productDetails : productDetailsMap.values()) {
-                      updateProductCardUI(productDetails);
+                  LinearLayout container = findViewById(R.id.dynamic_product_list);
+                  TextView noProductsText = findViewById(R.id.no_products_text);
+                  container.removeAllViews();
+                  selectedProductIds.clear();
+                  updateBuyButton();
+
+                  if (productDetailsMap.isEmpty()) {
+                      noProductsText.setVisibility(View.VISIBLE);
+                  } else {
+                      noProductsText.setVisibility(View.GONE);
+                      LayoutInflater inflater = LayoutInflater.from(this);
+                      for (ProductDetails productDetails : productDetailsMap.values()) {
+                          View cardView = inflater.inflate(R.layout.product_card, container, false);
+                          updateProductCardUI(cardView, productDetails);
+                          container.addView(cardView);
+                      }
                   }
               });
   }
 
   private int getDrawableProductImageForProductId(String productId) {
       return switch (productId) {
-        case ONE_TIME_PRODUCT_01 -> R.drawable.one_time_product_01;
         case CONSUMABLE_PRODUCT_01 -> R.drawable.consumable_product_01;
         case CONSUMABLE_PRODUCT_02 -> R.drawable.consumable_product_02;
         case CONSUMABLE_PRODUCT_03 -> R.drawable.consumable_product_03;

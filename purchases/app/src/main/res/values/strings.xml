@@ -19,8 +19,8 @@
     <string name="non_consumable_banner_title">Own It Forever</string>
     <string name="non_consumable_banner_subtitle">Exclusive gear that defines your legend</string>
 
-    <string name="consumable_banner_title">Power Surge</string>
-    <string name="consumable_banner_subtitle">Refill your stores and accelerate your progress</string>
+    <string name="consumable_banner_title">Subscription Packages</string>
+    <string name="consumable_banner_subtitle">Create a subscription plan that fits your watchlist</string>
 
     <string name="otp_title_placeholder">Product name</string>
     <string name="otp_description_placeholder">Product description</string>
@@ -31,5 +31,6 @@
     <string name="licenses">Licenses</string>
     <string name="github_url" translatable="false">https://github.com/googlesamples/play-billing-samples</string>
     <string name="codelab_url" translatable="false">https://codelabs.developers.google.com/play-billing-analyze-product-purchase-drop-offs</string>
+    <string name="buy_button">Buy Products</string>
 
 </resources>
