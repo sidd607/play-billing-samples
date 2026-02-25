@@ -35,6 +35,7 @@ import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.QueryProductDetailsParams;
 import com.android.billingclient.api.QueryProductDetailsParams.Product;
 import com.android.billingclient.api.QueryProductDetailsResult;
+import com.android.billingclient.api.QueryPurchasesParams;
 import com.google.common.collect.ImmutableList;
 import java.util.HashMap;
 import java.util.List;
@@ -124,6 +125,31 @@ public class BillingServiceClient {
             Log.e(TAG, "Billing Service connection lost.");
           }
         });
+  }
+
+  /**
+   * Queries active subscriptions and notifies the listener.
+   */
+  public void queryPurchases() {
+    QueryPurchasesParams params = QueryPurchasesParams.newBuilder()
+        .setProductType(BillingClient.ProductType.SUBS)
+        .build();
+
+    billingClient.queryPurchasesAsync(params, (billingResult, purchases) -> {
+      if (billingResult.getResponseCode() == BillingResponseCode.OK) {
+          Log.i(TAG, "Query Purchases: " + purchases);
+        billingServiceClientListener.onPurchasesFetched(purchases);
+      } else {
+        Log.e(TAG, "Query purchases failed: " + billingResult.getDebugMessage());
+      }
+    });
+  }
+
+  /**
+   * Returns product details for the given product ID.
+   */
+  public ProductDetails getProductDetails(String productId) {
+    return productDetailsMap.get(productId);
   }
 
   /**

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:16:1-51:12
-INJECTED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:16:1-51:12
-INJECTED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:16:1-51:12
-INJECTED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:16:1-51:12
+ADDED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:16:1-57:12
+INJECTED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:16:1-57:12
+INJECTED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:16:1-57:12
+INJECTED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:16:1-57:12
 MERGED from [androidx.compose.runtime:runtime-android:1.8.3] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/ceb0f2c3fd1c2fd7cc11f88436f8c459/transformed/jetified-runtime-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.test.ext:junit:1.2.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/cc196acf4f51e4bdad952df20300d39a/transformed/jetified-junit-1.2.1/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-oss-licenses:17.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/bb2745e5088d197266f2feb96220b0e9/transformed/jetified-play-services-oss-licenses-17.1.0/AndroidManifest.xml:2:1-11:12
@@ -219,8 +219,8 @@ MERGED from [com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/c
 	android:name
 		ADDED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:25:22-64
 application
-ADDED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:27:5-49:19
-INJECTED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:27:5-49:19
+ADDED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:27:5-55:19
+INJECTED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:27:5-55:19
 MERGED from [com.google.android.gms:play-services-oss-licenses:17.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/bb2745e5088d197266f2feb96220b0e9/transformed/jetified-play-services-oss-licenses-17.1.0/AndroidManifest.xml:6:5-9:19
 MERGED from [com.google.android.gms:play-services-oss-licenses:17.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/bb2745e5088d197266f2feb96220b0e9/transformed/jetified-play-services-oss-licenses-17.1.0/AndroidManifest.xml:6:5-9:19
 MERGED from [com.google.android.material:material:1.12.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/33d92d5844d6200f4ab7fa4750231098/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
@@ -295,6 +295,16 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:46:17-77
 	android:name
 		ADDED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:46:27-74
+activity#com.google.play.billing.samples.onetimepurchases.PurchasesActivity
+ADDED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:50:9-54:47
+	android:screenOrientation
+		ADDED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:53:13-49
+	android:exported
+		ADDED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:52:13-37
+	android:theme
+		ADDED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:54:13-44
+	android:name
+		ADDED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:51:13-94
 activity#com.google.android.gms.oss.licenses.OssLicensesMenuActivity
 ADDED from [com.google.android.gms:play-services-oss-licenses:17.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/bb2745e5088d197266f2feb96220b0e9/transformed/jetified-play-services-oss-licenses-17.1.0/AndroidManifest.xml:7:9-138
 	android:label

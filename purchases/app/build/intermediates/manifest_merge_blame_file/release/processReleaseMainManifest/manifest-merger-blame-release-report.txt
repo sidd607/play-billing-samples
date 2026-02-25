@@ -68,7 +68,7 @@
 45-->[androidx.core:core:1.13.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/f58cbdc16bd70274fa2eb01c10797f58/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
 46
 47    <application
-47-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:27:5-49:19
+47-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:27:5-55:19
 48        android:allowBackup="true"
 48-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:28:9-35
 49        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -113,201 +113,211 @@
 72            </intent-filter>
 73        </activity>
 74        <activity
-74-->[com.google.android.gms:play-services-oss-licenses:17.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/bb2745e5088d197266f2feb96220b0e9/transformed/jetified-play-services-oss-licenses-17.1.0/AndroidManifest.xml:7:9-138
-75            android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"
-75-->[com.google.android.gms:play-services-oss-licenses:17.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/bb2745e5088d197266f2feb96220b0e9/transformed/jetified-play-services-oss-licenses-17.1.0/AndroidManifest.xml:7:19-93
-76            android:label="@string/oss_license_title" />
-76-->[com.google.android.gms:play-services-oss-licenses:17.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/bb2745e5088d197266f2feb96220b0e9/transformed/jetified-play-services-oss-licenses-17.1.0/AndroidManifest.xml:7:94-135
-77        <activity android:name="com.google.android.gms.oss.licenses.OssLicensesActivity" />
-77-->[com.google.android.gms:play-services-oss-licenses:17.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/bb2745e5088d197266f2feb96220b0e9/transformed/jetified-play-services-oss-licenses-17.1.0/AndroidManifest.xml:8:9-92
-77-->[com.google.android.gms:play-services-oss-licenses:17.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/bb2745e5088d197266f2feb96220b0e9/transformed/jetified-play-services-oss-licenses-17.1.0/AndroidManifest.xml:8:19-89
-78
-79        <meta-data
-79-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:22:9-24:37
-80            android:name="com.google.android.play.billingclient.version"
-80-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:23:13-73
-81            android:value="8.1.0" />
-81-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:24:13-34
-82
-83        <activity
-83-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:26:9-30:75
-84            android:name="com.android.billingclient.api.ProxyBillingActivity"
-84-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:27:13-78
-85            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-85-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:28:13-96
-86            android:exported="false"
-86-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:29:13-37
-87            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-87-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:30:13-72
+74-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:50:9-54:47
+75            android:name="com.google.play.billing.samples.onetimepurchases.PurchasesActivity"
+75-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:51:13-94
+76            android:exported="false"
+76-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:52:13-37
+77            android:screenOrientation="portrait"
+77-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:53:13-49
+78            android:theme="@style/AppTheme" />
+78-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:54:13-44
+79        <activity
+79-->[com.google.android.gms:play-services-oss-licenses:17.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/bb2745e5088d197266f2feb96220b0e9/transformed/jetified-play-services-oss-licenses-17.1.0/AndroidManifest.xml:7:9-138
+80            android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"
+80-->[com.google.android.gms:play-services-oss-licenses:17.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/bb2745e5088d197266f2feb96220b0e9/transformed/jetified-play-services-oss-licenses-17.1.0/AndroidManifest.xml:7:19-93
+81            android:label="@string/oss_license_title" />
+81-->[com.google.android.gms:play-services-oss-licenses:17.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/bb2745e5088d197266f2feb96220b0e9/transformed/jetified-play-services-oss-licenses-17.1.0/AndroidManifest.xml:7:94-135
+82        <activity android:name="com.google.android.gms.oss.licenses.OssLicensesActivity" />
+82-->[com.google.android.gms:play-services-oss-licenses:17.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/bb2745e5088d197266f2feb96220b0e9/transformed/jetified-play-services-oss-licenses-17.1.0/AndroidManifest.xml:8:9-92
+82-->[com.google.android.gms:play-services-oss-licenses:17.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/bb2745e5088d197266f2feb96220b0e9/transformed/jetified-play-services-oss-licenses-17.1.0/AndroidManifest.xml:8:19-89
+83
+84        <meta-data
+84-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:22:9-24:37
+85            android:name="com.google.android.play.billingclient.version"
+85-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:23:13-73
+86            android:value="8.1.0" />
+86-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:24:13-34
+87
 88        <activity
-88-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:31:9-35:75
-89            android:name="com.android.billingclient.api.ProxyBillingActivityV2"
-89-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:32:13-80
+88-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:26:9-30:75
+89            android:name="com.android.billingclient.api.ProxyBillingActivity"
+89-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:27:13-78
 90            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-90-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:33:13-96
+90-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:28:13-96
 91            android:exported="false"
-91-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:34:13-37
+91-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:29:13-37
 92            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-92-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:35:13-72
+92-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:30:13-72
 93        <activity
-93-->[com.google.android.gms:play-services-base:18.5.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/dba5f0c1c9929408761a80b38da5a196/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:9-173
-94            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-94-->[com.google.android.gms:play-services-base:18.5.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/dba5f0c1c9929408761a80b38da5a196/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:19-85
-95            android:exported="false"
-95-->[com.google.android.gms:play-services-base:18.5.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/dba5f0c1c9929408761a80b38da5a196/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:146-170
-96            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-96-->[com.google.android.gms:play-services-base:18.5.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/dba5f0c1c9929408761a80b38da5a196/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:86-145
-97
-98        <meta-data
-98-->[com.google.android.gms:play-services-basement:18.9.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/534af204e52a1444689ecc744db2f91e/transformed/jetified-play-services-basement-18.9.0/AndroidManifest.xml:21:9-23:69
-99            android:name="com.google.android.gms.version"
-99-->[com.google.android.gms:play-services-basement:18.9.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/534af204e52a1444689ecc744db2f91e/transformed/jetified-play-services-basement-18.9.0/AndroidManifest.xml:22:13-58
-100            android:value="@integer/google_play_services_version" />
-100-->[com.google.android.gms:play-services-basement:18.9.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/534af204e52a1444689ecc744db2f91e/transformed/jetified-play-services-basement-18.9.0/AndroidManifest.xml:23:13-66
-101
-102        <activity
-102-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:27:9-34:20
-103            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
-103-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:28:13-99
-104            android:exported="true"
-104-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:29:13-36
-105            android:theme="@style/WhiteBackgroundTheme" >
-105-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:30:13-56
-106            <intent-filter android:priority="-100" >
-106-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:31:13-33:29
-106-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:31:28-51
-107                <category android:name="android.intent.category.LAUNCHER" />
-107-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:46:17-77
-107-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:46:27-74
-108            </intent-filter>
-109        </activity>
-110        <activity
-110-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:35:9-42:20
-111            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
-111-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:36:13-95
-112            android:exported="true"
-112-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:37:13-36
-113            android:theme="@style/WhiteBackgroundTheme" >
-113-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:38:13-56
-114            <intent-filter android:priority="-100" >
-114-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:31:13-33:29
-114-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:31:28-51
-115                <category android:name="android.intent.category.LAUNCHER" />
-115-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:46:17-77
-115-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:46:27-74
-116            </intent-filter>
-117        </activity>
-118        <activity
-118-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:43:9-50:20
-119            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
-119-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:44:13-103
-120            android:exported="true"
-120-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:45:13-36
-121            android:theme="@style/WhiteBackgroundDialogTheme" >
-121-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:46:13-62
-122            <intent-filter android:priority="-100" >
-122-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:31:13-33:29
-122-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:31:28-51
-123                <category android:name="android.intent.category.LAUNCHER" />
-123-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:46:17-77
-123-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:46:27-74
-124            </intent-filter>
-125        </activity>
-126
-127        <provider
-127-->[androidx.emoji2:emoji2:1.3.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/63e460754375a063ac59abaf9aedc6e1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
-128            android:name="androidx.startup.InitializationProvider"
-128-->[androidx.emoji2:emoji2:1.3.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/63e460754375a063ac59abaf9aedc6e1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:25:13-67
-129            android:authorities="com.dynamic.sku.test.app.androidx-startup"
-129-->[androidx.emoji2:emoji2:1.3.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/63e460754375a063ac59abaf9aedc6e1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:26:13-68
-130            android:exported="false" >
-130-->[androidx.emoji2:emoji2:1.3.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/63e460754375a063ac59abaf9aedc6e1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:27:13-37
-131            <meta-data
-131-->[androidx.emoji2:emoji2:1.3.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/63e460754375a063ac59abaf9aedc6e1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
-132                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-132-->[androidx.emoji2:emoji2:1.3.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/63e460754375a063ac59abaf9aedc6e1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:30:17-75
-133                android:value="androidx.startup" />
-133-->[androidx.emoji2:emoji2:1.3.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/63e460754375a063ac59abaf9aedc6e1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:31:17-49
-134            <meta-data
-134-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/13e8f1b0ac26b4edec83f15e68d0acdd/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
-135                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-135-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/13e8f1b0ac26b4edec83f15e68d0acdd/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
-136                android:value="androidx.startup" />
-136-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/13e8f1b0ac26b4edec83f15e68d0acdd/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
-137            <meta-data
-137-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
-138                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-138-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
-139                android:value="androidx.startup" />
-139-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
-140        </provider>
-141
-142        <service
-142-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/681d42a9bef0b53c6413915efca5cfeb/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:28:9-34:19
-143            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-143-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/681d42a9bef0b53c6413915efca5cfeb/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:29:13-103
-144            android:exported="false" >
-144-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/681d42a9bef0b53c6413915efca5cfeb/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:30:13-37
-145            <meta-data
-145-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/681d42a9bef0b53c6413915efca5cfeb/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:31:13-33:39
-146                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-146-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/681d42a9bef0b53c6413915efca5cfeb/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:32:17-94
-147                android:value="cct" />
-147-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/681d42a9bef0b53c6413915efca5cfeb/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:33:17-36
-148        </service>
-149        <service
-149-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a3ea2fdde1a6cc209075918b1c2fd3ea/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:26:9-30:19
-150            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-150-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a3ea2fdde1a6cc209075918b1c2fd3ea/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:27:13-117
-151            android:exported="false"
-151-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a3ea2fdde1a6cc209075918b1c2fd3ea/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:28:13-37
-152            android:permission="android.permission.BIND_JOB_SERVICE" >
-152-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a3ea2fdde1a6cc209075918b1c2fd3ea/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:29:13-69
+93-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:31:9-35:75
+94            android:name="com.android.billingclient.api.ProxyBillingActivityV2"
+94-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:32:13-80
+95            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+95-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:33:13-96
+96            android:exported="false"
+96-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:34:13-37
+97            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+97-->[com.android.billingclient:billing:8.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/e22aa9b6d444096be99ce73269d569d0/transformed/jetified-billing-8.1.0/AndroidManifest.xml:35:13-72
+98        <activity
+98-->[com.google.android.gms:play-services-base:18.5.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/dba5f0c1c9929408761a80b38da5a196/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+99            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+99-->[com.google.android.gms:play-services-base:18.5.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/dba5f0c1c9929408761a80b38da5a196/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+100            android:exported="false"
+100-->[com.google.android.gms:play-services-base:18.5.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/dba5f0c1c9929408761a80b38da5a196/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+101            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+101-->[com.google.android.gms:play-services-base:18.5.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/dba5f0c1c9929408761a80b38da5a196/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+102
+103        <meta-data
+103-->[com.google.android.gms:play-services-basement:18.9.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/534af204e52a1444689ecc744db2f91e/transformed/jetified-play-services-basement-18.9.0/AndroidManifest.xml:21:9-23:69
+104            android:name="com.google.android.gms.version"
+104-->[com.google.android.gms:play-services-basement:18.9.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/534af204e52a1444689ecc744db2f91e/transformed/jetified-play-services-basement-18.9.0/AndroidManifest.xml:22:13-58
+105            android:value="@integer/google_play_services_version" />
+105-->[com.google.android.gms:play-services-basement:18.9.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/534af204e52a1444689ecc744db2f91e/transformed/jetified-play-services-basement-18.9.0/AndroidManifest.xml:23:13-66
+106
+107        <activity
+107-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:27:9-34:20
+108            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+108-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:28:13-99
+109            android:exported="true"
+109-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:29:13-36
+110            android:theme="@style/WhiteBackgroundTheme" >
+110-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:30:13-56
+111            <intent-filter android:priority="-100" >
+111-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:31:13-33:29
+111-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:31:28-51
+112                <category android:name="android.intent.category.LAUNCHER" />
+112-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:46:17-77
+112-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:46:27-74
+113            </intent-filter>
+114        </activity>
+115        <activity
+115-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:35:9-42:20
+116            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+116-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:36:13-95
+117            android:exported="true"
+117-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:37:13-36
+118            android:theme="@style/WhiteBackgroundTheme" >
+118-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:38:13-56
+119            <intent-filter android:priority="-100" >
+119-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:31:13-33:29
+119-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:31:28-51
+120                <category android:name="android.intent.category.LAUNCHER" />
+120-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:46:17-77
+120-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:46:27-74
+121            </intent-filter>
+122        </activity>
+123        <activity
+123-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:43:9-50:20
+124            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+124-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:44:13-103
+125            android:exported="true"
+125-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:45:13-36
+126            android:theme="@style/WhiteBackgroundDialogTheme" >
+126-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:46:13-62
+127            <intent-filter android:priority="-100" >
+127-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:31:13-33:29
+127-->[androidx.test:core:1.6.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a8e3141a91749f57f3558e7056170f81/transformed/jetified-core-1.6.1/AndroidManifest.xml:31:28-51
+128                <category android:name="android.intent.category.LAUNCHER" />
+128-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:46:17-77
+128-->/Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:46:27-74
+129            </intent-filter>
+130        </activity>
+131
+132        <provider
+132-->[androidx.emoji2:emoji2:1.3.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/63e460754375a063ac59abaf9aedc6e1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+133            android:name="androidx.startup.InitializationProvider"
+133-->[androidx.emoji2:emoji2:1.3.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/63e460754375a063ac59abaf9aedc6e1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:25:13-67
+134            android:authorities="com.dynamic.sku.test.app.androidx-startup"
+134-->[androidx.emoji2:emoji2:1.3.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/63e460754375a063ac59abaf9aedc6e1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:26:13-68
+135            android:exported="false" >
+135-->[androidx.emoji2:emoji2:1.3.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/63e460754375a063ac59abaf9aedc6e1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:27:13-37
+136            <meta-data
+136-->[androidx.emoji2:emoji2:1.3.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/63e460754375a063ac59abaf9aedc6e1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+137                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+137-->[androidx.emoji2:emoji2:1.3.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/63e460754375a063ac59abaf9aedc6e1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:30:17-75
+138                android:value="androidx.startup" />
+138-->[androidx.emoji2:emoji2:1.3.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/63e460754375a063ac59abaf9aedc6e1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:31:17-49
+139            <meta-data
+139-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/13e8f1b0ac26b4edec83f15e68d0acdd/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+140                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+140-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/13e8f1b0ac26b4edec83f15e68d0acdd/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+141                android:value="androidx.startup" />
+141-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/13e8f1b0ac26b4edec83f15e68d0acdd/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+142            <meta-data
+142-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+143                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+143-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+144                android:value="androidx.startup" />
+144-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+145        </provider>
+146
+147        <service
+147-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/681d42a9bef0b53c6413915efca5cfeb/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:28:9-34:19
+148            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+148-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/681d42a9bef0b53c6413915efca5cfeb/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:29:13-103
+149            android:exported="false" >
+149-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/681d42a9bef0b53c6413915efca5cfeb/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:30:13-37
+150            <meta-data
+150-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/681d42a9bef0b53c6413915efca5cfeb/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:31:13-33:39
+151                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+151-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/681d42a9bef0b53c6413915efca5cfeb/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:32:17-94
+152                android:value="cct" />
+152-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/681d42a9bef0b53c6413915efca5cfeb/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:33:17-36
 153        </service>
-154
-155        <receiver
-155-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a3ea2fdde1a6cc209075918b1c2fd3ea/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:32:9-34:40
-156            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-156-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a3ea2fdde1a6cc209075918b1c2fd3ea/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:33:13-132
-157            android:exported="false" />
-157-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a3ea2fdde1a6cc209075918b1c2fd3ea/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:34:13-37
-158        <receiver
-158-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
-159            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-159-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
-160            android:directBootAware="false"
-160-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
-161            android:enabled="true"
-161-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
-162            android:exported="true"
-162-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
-163            android:permission="android.permission.DUMP" >
-163-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
-164            <intent-filter>
-164-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
-165                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-165-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
-165-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
-166            </intent-filter>
-167            <intent-filter>
-167-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
-168                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-168-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
-168-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
-169            </intent-filter>
-170            <intent-filter>
-170-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
-171                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-171-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
-171-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
-172            </intent-filter>
-173            <intent-filter>
-173-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
-174                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-174-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
-174-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
-175            </intent-filter>
-176        </receiver>
-177    </application>
-178
-179</manifest>
+154        <service
+154-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a3ea2fdde1a6cc209075918b1c2fd3ea/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:26:9-30:19
+155            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+155-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a3ea2fdde1a6cc209075918b1c2fd3ea/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:27:13-117
+156            android:exported="false"
+156-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a3ea2fdde1a6cc209075918b1c2fd3ea/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:28:13-37
+157            android:permission="android.permission.BIND_JOB_SERVICE" >
+157-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a3ea2fdde1a6cc209075918b1c2fd3ea/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:29:13-69
+158        </service>
+159
+160        <receiver
+160-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a3ea2fdde1a6cc209075918b1c2fd3ea/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:32:9-34:40
+161            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+161-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a3ea2fdde1a6cc209075918b1c2fd3ea/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:33:13-132
+162            android:exported="false" />
+162-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/a3ea2fdde1a6cc209075918b1c2fd3ea/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:34:13-37
+163        <receiver
+163-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+164            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+164-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+165            android:directBootAware="false"
+165-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+166            android:enabled="true"
+166-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+167            android:exported="true"
+167-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+168            android:permission="android.permission.DUMP" >
+168-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+169            <intent-filter>
+169-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+170                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+170-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+170-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+171            </intent-filter>
+172            <intent-filter>
+172-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+173                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+173-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+173-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+174            </intent-filter>
+175            <intent-filter>
+175-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+176                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+176-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+176-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+177            </intent-filter>
+178            <intent-filter>
+178-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+179                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+179-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+179-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/65dcad394b571526ed2a6f7970d69478/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+180            </intent-filter>
+181        </receiver>
+182    </application>
+183
+184</manifest>

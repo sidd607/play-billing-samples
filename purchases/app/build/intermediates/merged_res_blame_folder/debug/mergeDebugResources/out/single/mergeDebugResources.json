@@ -16,20 +16,24 @@
         "source": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-main-41:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-debug-39:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-main-41:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-debug-39:/drawable_consumable_product_03.png.flat",
+        "source": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-main-41:/drawable/consumable_product_03.png"
     },
     {
         "merged": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-debug-39:/raw_third_party_license_metadata.flat",
         "source": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-debug-36:/raw/third_party_license_metadata"
     },
     {
-        "merged": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-debug-39:/drawable_consumable_product_03.png.flat",
-        "source": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-main-41:/drawable/consumable_product_03.png"
+        "merged": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-debug-39:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-main-41:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
         "merged": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-debug-39:/drawable_consumable_product_01.png.flat",
         "source": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-main-41:/drawable/consumable_product_01.png"
+    },
+    {
+        "merged": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-debug-39:/xml_activity_purchases_scene.xml.flat",
+        "source": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-main-41:/xml/activity_purchases_scene.xml"
     },
     {
         "merged": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-debug-39:/drawable_banner.png.flat",
@@ -84,12 +88,24 @@
         "source": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-main-41:/drawable/ic_launcher_background.xml"
     },
     {
+        "merged": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-debug-39:/drawable_ic_subscriptions.xml.flat",
+        "source": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-main-41:/drawable/ic_subscriptions.xml"
+    },
+    {
         "merged": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-debug-39:/drawable_consumable_product_02.png.flat",
         "source": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-main-41:/drawable/consumable_product_02.png"
     },
     {
         "merged": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-debug-39:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
         "source": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-main-41:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-debug-39:/drawable_ic_remove.xml.flat",
+        "source": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-main-41:/drawable/ic_remove.xml"
+    },
+    {
+        "merged": "com.google.play.billing.samples.onetimepurchases.app-debug-39:/drawable_ic_add.xml.flat",
+        "source": "com.google.play.billing.samples.onetimepurchases.app-main-41:/drawable/ic_add.xml"
     },
     {
         "merged": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-debug-39:/drawable_ic_check_circle.xml.flat",
@@ -132,7 +148,7 @@
         "source": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-main-41:/mipmap-xxhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.google.play.billing.samples.onetimepurchases.app-debug-39:/layout_product_card.xml.flat",
-        "source": "com.google.play.billing.samples.onetimepurchases.app-main-41:/layout/product_card.xml"
+        "merged": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-debug-39:/layout_activity_purchases.xml.flat",
+        "source": "/Users/siddpadhi/.gradle/daemon/8.11.1/com.google.play.billing.samples.onetimepurchases.app-main-41:/layout/activity_purchases.xml"
     }
 ]

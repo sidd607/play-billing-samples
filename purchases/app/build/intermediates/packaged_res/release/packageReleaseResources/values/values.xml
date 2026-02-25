@@ -24,12 +24,16 @@
     <string name="github">GitHub</string>
     <string name="github_url" translatable="false">https://github.com/googlesamples/play-billing-samples</string>
     <string name="licenses">Licenses</string>
+    <string name="my_subscriptions_subtitle">Manage your active subscription plans</string>
+    <string name="my_subscriptions_title">My Subscriptions</string>
+    <string name="no_active_subscriptions">You have no active subscriptions</string>
     <string name="non_consumable_banner_subtitle">Exclusive gear that defines your legend</string>
     <string name="non_consumable_banner_title">Own It Forever</string>
     <string name="otp_description_placeholder">Product description</string>
     <string name="otp_price_placeholder">$$$</string>
     <string name="otp_title_placeholder">Product name</string>
     <string name="resources">Resources</string>
+    <string name="update_subscriptions">Update Subscriptions</string>
     <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
         
         <item name="colorPrimary">@color/md_theme_primary</item>

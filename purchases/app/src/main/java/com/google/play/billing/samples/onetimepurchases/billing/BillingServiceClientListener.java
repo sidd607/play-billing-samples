@@ -16,7 +16,9 @@ package com.google.play.billing.samples.onetimepurchases.billing;
 
 import com.android.billingclient.api.BillingResult;
 import com.android.billingclient.api.ProductDetails;
+import com.android.billingclient.api.Purchase;
 
+import java.util.List;
 import java.util.Map;
 
 /** Interface for handling events from the BillingServiceClient class. */
@@ -29,4 +31,5 @@ public interface BillingServiceClientListener {
    */
   void onBillingResponse(int responseCode, BillingResult billingResult);
   void onProductDetailsFetched(Map<String, ProductDetails> productDetailsMap);
+  void onPurchasesFetched(List<Purchase> purchases);
 }

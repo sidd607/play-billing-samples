@@ -3068,6 +3068,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_add
 drawable ic_arrow_back_black_24
 drawable ic_call_answer
 drawable ic_call_answer_low
@@ -3088,7 +3089,9 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_remove
 drawable ic_search_black_24
+drawable ic_subscriptions
 drawable indeterminate_static
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3502,6 +3505,7 @@ id noScroll
 id noState
 id no_licenses_text
 id no_products_text
+id no_subscriptions_text
 id none
 id normal
 id north
@@ -3553,6 +3557,7 @@ id product_price
 id product_title
 id progress_circular
 id progress_horizontal
+id purchased_products_container
 id radio
 id ratio
 id rectangles
@@ -3679,10 +3684,12 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id update_all_button
 id useLogo
 id vertical
 id vertical_only
 id view_offset_helper
+id view_purchases_fab
 id view_transition
 id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
@@ -3816,6 +3823,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_purchases
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -4095,6 +4103,9 @@ string mtrl_switch_track_decoration_path
 string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
+string my_subscriptions_subtitle
+string my_subscriptions_title
+string no_active_subscriptions
 string no_licenses_available
 string non_consumable_banner_subtitle
 string non_consumable_banner_title
@@ -4116,6 +4127,7 @@ string searchview_navigation_content_description
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string update_subscriptions
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -5404,5 +5416,6 @@ styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
 xml activity_main_scene
+xml activity_purchases_scene
 xml com_android_billingclient_phenotype
 xml locales_config
