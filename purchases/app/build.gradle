@@ -47,6 +47,10 @@ android {
         coreLibraryDesugaringEnabled true
     }
 
+    buildFeatures {
+        viewBinding true
+    }
+
 }
 
 

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.google.play.billing.samples.onetimepurchases.app-mergeDebugResources-38:/layout/product_card.xml",
+        "source": "com.google.play.billing.samples.onetimepurchases.app-main-41:/layout/product_card.xml"
+    },
+    {
+        "merged": "com.google.play.billing.samples.onetimepurchases.app-mergeDebugResources-38:/layout/activity_main.xml",
+        "source": "com.google.play.billing.samples.onetimepurchases.app-main-41:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.google.play.billing.samples.onetimepurchases.app-mergeDebugResources-38:/layout/activity_purchases.xml",
+        "source": "com.google.play.billing.samples.onetimepurchases.app-main-41:/layout/activity_purchases.xml"
+    }
+]

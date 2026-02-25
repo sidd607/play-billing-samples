@@ -4,6 +4,7 @@ ADDED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/Andr
 INJECTED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:16:1-57:12
 INJECTED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:16:1-57:12
 INJECTED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:16:1-57:12
+MERGED from [androidx.databinding:viewbinding:8.9.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/29f419a1ce13aa59868ddb1cad9b17e2/transformed/jetified-viewbinding-8.9.1/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.runtime:runtime-android:1.8.3] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/ceb0f2c3fd1c2fd7cc11f88436f8c459/transformed/jetified-runtime-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.test.ext:junit:1.2.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/cc196acf4f51e4bdad952df20300d39a/transformed/jetified-junit-1.2.1/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-oss-licenses:17.1.0] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/bb2745e5088d197266f2feb96220b0e9/transformed/jetified-play-services-oss-licenses-17.1.0/AndroidManifest.xml:2:1-11:12
@@ -78,6 +79,8 @@ uses-sdk
 ADDED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:22:5-73
 INJECTED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:22:5-73
 INJECTED from /Users/siddpadhi/git/play-billing-samples/purchases/app/src/main/AndroidManifest.xml:22:5-73
+MERGED from [androidx.databinding:viewbinding:8.9.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/29f419a1ce13aa59868ddb1cad9b17e2/transformed/jetified-viewbinding-8.9.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.9.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/29f419a1ce13aa59868ddb1cad9b17e2/transformed/jetified-viewbinding-8.9.1/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.runtime:runtime-android:1.8.3] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/ceb0f2c3fd1c2fd7cc11f88436f8c459/transformed/jetified-runtime-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.runtime:runtime-android:1.8.3] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/ceb0f2c3fd1c2fd7cc11f88436f8c459/transformed/jetified-runtime-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.test.ext:junit:1.2.1] /Users/siddpadhi/.gradle/caches/8.11.1/transforms/cc196acf4f51e4bdad952df20300d39a/transformed/jetified-junit-1.2.1/AndroidManifest.xml:20:5-22:41
