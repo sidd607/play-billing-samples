@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.dynamic.sku.test.app",
+  "applicationId": "com.play.billing.samples.preorder",
   "variantName": "release",
   "elements": []
 }

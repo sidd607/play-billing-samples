@@ -24,7 +24,7 @@
     <string name="github">GitHub</string>
     <string name="github_url" translatable="false">https://github.com/googlesamples/play-billing-samples</string>
     <string name="licenses">Licenses</string>
-    <string name="my_subscriptions_subtitle">Manage your active subscription plans</string>
+    <string name="my_subscriptions_subtitle">Add or remove subscription packages to update you current subscription bundle</string>
     <string name="my_subscriptions_title">My Subscriptions</string>
     <string name="no_active_subscriptions">You have no active subscriptions</string>
     <string name="non_consumable_banner_subtitle">Exclusive gear that defines your legend</string>

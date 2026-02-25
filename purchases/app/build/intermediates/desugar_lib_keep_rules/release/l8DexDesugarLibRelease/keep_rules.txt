@@ -1,9 +1,6 @@
 -keep class j$.lang.Iterable$-CC {
   public static void $default$forEach(java.lang.Iterable,java.util.function.Consumer);
 }
--keep class j$.lang.Iterable$-EL {
-  public static void forEach(java.lang.Iterable,java.util.function.Consumer);
-}
 -keep class j$.time.Duration {
   public int compareTo(j$.time.Duration);
   public int getNano();
@@ -77,6 +74,9 @@
   public static void $default$replaceAll(java.util.List,java.util.function.UnaryOperator);
   public static void $default$sort(java.util.List,java.util.Comparator);
   public static j$.util.Spliterator $default$spliterator(java.util.List);
+}
+-keep class j$.util.List$-EL {
+  public static void sort(java.util.List,java.util.Comparator);
 }
 -keep interface j$.util.Map {
   public java.lang.Object compute(java.lang.Object,java.util.function.BiFunction);

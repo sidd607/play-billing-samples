@@ -23,7 +23,7 @@ android {
     namespace="com.google.play.billing.samples.onetimepurchases"
 
     defaultConfig {
-        applicationId "com.dynamic.sku.test.app"
+        applicationId "com.play.billing.samples.preorder"
         minSdk 23
         targetSdk 36
         versionCode 1

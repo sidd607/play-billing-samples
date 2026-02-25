@@ -54,6 +54,7 @@ import androidx.core.content.ContextCompat;
 public class PurchasesActivity extends AppCompatActivity implements BillingServiceClientListener {
 
   private BillingServiceClient billingServiceClient;
+  private String activePurchaseToken = null;
   private final Set<String> ownedProductIds = new HashSet<>();
   private final Set<String> productsToAdd = new HashSet<>();
   private final Set<String> productsToRemove = new HashSet<>();
@@ -126,7 +127,22 @@ public class PurchasesActivity extends AppCompatActivity implements BillingServi
         new MaterialAlertDialogBuilder(this)
             .setTitle("Confirm Updates")
             .setMessage(message.toString())
-            .setPositiveButton("Confirm", (dialog, which) -> finish())
+            .setPositiveButton("Confirm", (dialog, which) -> {
+                List<String> finalProductList = new ArrayList<>(ownedProductIds);
+                finalProductList.removeAll(productsToRemove);
+                finalProductList.addAll(productsToAdd);
+                
+                if (finalProductList.isEmpty()) {
+                    new MaterialAlertDialogBuilder(this)
+                        .setTitle("Cannot Empty Bundle")
+                        .setMessage("A subscription bundle must have at least one product. Please keep at least one subscription.")
+                        .setPositiveButton("OK", null)
+                        .show();
+                } else {
+                    android.util.Log.i("PurchasesActivity", "Launching update for: " + finalProductList + " with token: " + activePurchaseToken);
+                    billingServiceClient.launchBillingFlow(finalProductList, activePurchaseToken);
+                }
+            })
             .setNegativeButton("Cancel", null)
             .show();
     });
@@ -134,7 +150,27 @@ public class PurchasesActivity extends AppCompatActivity implements BillingServi
 
   @Override
   public void onBillingResponse(int responseCode, BillingResult billingResult) {
-      // Handle as needed
+      showBillingResponseDialog(responseCode, billingResult);
+  }
+
+  public void showBillingResponseDialog(int responseCode, BillingResult billingResult) {
+    final String dialogTitle =
+        responseCode == BillingResponseCode.OK ? "Update Successful" : "Update Failed";
+
+    final String dialogMessage = billingResult.toString();
+
+    runOnUiThread(
+        () -> {
+          new MaterialAlertDialogBuilder(this)
+              .setTitle(dialogTitle)
+              .setMessage(dialogMessage)
+              .setPositiveButton("OK", (dialog, which) -> {
+                  if (responseCode == BillingResponseCode.OK) {
+                      billingServiceClient.queryPurchases();
+                  }
+              })
+              .show();
+        });
   }
 
   @Override
@@ -147,10 +183,14 @@ public class PurchasesActivity extends AppCompatActivity implements BillingServi
   @Override
   public void onPurchasesFetched(List<Purchase> purchases) {
       ownedProductIds.clear();
+      activePurchaseToken = null;
       if (purchases != null) {
           for (Purchase purchase : purchases) {
               if (purchase.getPurchaseState() == Purchase.PurchaseState.PURCHASED) {
                   ownedProductIds.addAll(purchase.getProducts());
+                  if (activePurchaseToken == null) {
+                      activePurchaseToken = purchase.getPurchaseToken();
+                  }
               }
           }
       }
@@ -172,7 +212,16 @@ public class PurchasesActivity extends AppCompatActivity implements BillingServi
               updateButton.setVisibility(View.VISIBLE);
               LayoutInflater inflater = LayoutInflater.from(this);
               
-              for (ProductDetails details : allProductDetails.values()) {
+              List<ProductDetails> sortedDetails = new ArrayList<>(allProductDetails.values());
+              sortedDetails.sort((p1, p2) -> {
+                  boolean p1Owned = ownedProductIds.contains(p1.getProductId());
+                  boolean p2Owned = ownedProductIds.contains(p2.getProductId());
+                  if (p1Owned && !p2Owned) return -1;
+                  if (!p1Owned && p2Owned) return 1;
+                  return p1.getName().compareTo(p2.getName());
+              });
+
+              for (ProductDetails details : sortedDetails) {
                   View cardView = inflater.inflate(R.layout.product_card, container, false);
                   updateProductCardUI(cardView, details);
                   container.addView(cardView);
@@ -194,7 +243,7 @@ public class PurchasesActivity extends AppCompatActivity implements BillingServi
     MaterialCardView card = (MaterialCardView) cardView;
 
     titleView.setText(productDetails.getName());
-    descView.setText(productDetails.getDescription());
+    descView.setText(productDetails.getDescription().strip().replace("\n", ""));
     productImageView.setImageResource(getDrawableProductImageForProductId(productId));
 
     if (isOwned) {
@@ -212,6 +261,7 @@ public class PurchasesActivity extends AppCompatActivity implements BillingServi
         String formattedPrice = "";
         if (productDetails.getSubscriptionOfferDetails() != null) {
           for (ProductDetails.SubscriptionOfferDetails offerDetails : productDetails.getSubscriptionOfferDetails()) {
+            // EXCLUSIVELY look for the monthly plan (P1M)
             for (ProductDetails.PricingPhase phase : offerDetails.getPricingPhases().getPricingPhaseList()) {
               if ("P1M".equals(phase.getBillingPeriod())) {
                 formattedPrice = phase.getFormattedPrice();
@@ -221,8 +271,13 @@ public class PurchasesActivity extends AppCompatActivity implements BillingServi
             if (!formattedPrice.isEmpty()) break;
           }
         }
-        priceView.setText(formattedPrice);
-        priceView.setTextColor(ContextCompat.getColor(this, R.color.md_theme_primary));
+
+        if (!ownedProductIds.contains(productId) && formattedPrice.isEmpty()) {
+            cardView.setVisibility(View.GONE);
+            return;
+        }
+
+        priceView.setText(formattedPrice);        priceView.setTextColor(ContextCompat.getColor(this, R.color.md_theme_primary));
         periodView.setVisibility(View.VISIBLE);
 
         card.setCheckedIconResource(R.drawable.ic_add);
@@ -283,8 +338,11 @@ public class PurchasesActivity extends AppCompatActivity implements BillingServi
 
   private int getDrawableProductImageForProductId(String productId) {
     return switch (productId) {
-      case SUBS_PRODUCT_02 -> R.drawable.consumable_product_02;
-      case ADDON_SUBS_PRODUCT_01 -> R.drawable.consumable_product_03;
+        case SUBS_PRODUCT_01 -> R.drawable.consumable_product_01;
+        case SUBS_PRODUCT_02 -> R.drawable.consumable_product_02;
+        case ADDON_SUBS_PRODUCT_01 -> R.drawable.consumable_product_03;
+        case ADDON_SUBS_PRODUCT_02 -> R.drawable.consumable_product_04;
+        case ADDON_SUBS_PRODUCT_03 -> R.drawable.consumable_product_05;
       default -> R.drawable.consumable_product_01;
     };
   }

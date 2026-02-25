@@ -18,8 +18,13 @@ color md_theme_surface
 drawable banner
 drawable coin_image
 drawable consumable_product_01
+drawable consumable_product_01_copy
 drawable consumable_product_02
+drawable consumable_product_02_copy
 drawable consumable_product_03
+drawable consumable_product_03_copy
+drawable consumable_product_04
+drawable consumable_product_05
 drawable ic_add
 drawable ic_check_circle
 drawable ic_launcher_background

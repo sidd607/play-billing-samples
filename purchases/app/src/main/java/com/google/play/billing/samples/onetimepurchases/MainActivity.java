@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity implements BillingServiceCli
             String formattedPrice = "";
             if (productDetails.getSubscriptionOfferDetails() != null) {
                 for (ProductDetails.SubscriptionOfferDetails offerDetails : productDetails.getSubscriptionOfferDetails()) {
-                    // Look for the monthly plan (P1M)
+                    // EXCLUSIVELY look for the monthly plan (P1M)
                     for (ProductDetails.PricingPhase phase : offerDetails.getPricingPhases().getPricingPhaseList()) {
                         if ("P1M".equals(phase.getBillingPeriod())) {
                             formattedPrice = phase.getFormattedPrice();
@@ -191,8 +191,14 @@ public class MainActivity extends AppCompatActivity implements BillingServiceCli
                     if (!formattedPrice.isEmpty()) break;
                 }
             }
-            priceView.setText(formattedPrice);
-            priceView.setTextColor(getResources().getColor(R.color.md_theme_primary, getTheme()));
+
+            // If we still have no price, this product shouldn't be rendered
+            if (!isOwned && formattedPrice.isEmpty()) {
+                cardView.setVisibility(View.GONE);
+                return;
+            }
+
+            priceView.setText(formattedPrice);            priceView.setTextColor(getResources().getColor(R.color.md_theme_primary, getTheme()));
             periodView.setVisibility(View.VISIBLE);
             card.setCheckable(true);
             card.setClickable(true);
@@ -217,7 +223,7 @@ public class MainActivity extends AppCompatActivity implements BillingServiceCli
             buyAllButton.setVisibility(View.GONE);
         } else {
             buyAllButton.setVisibility(View.VISIBLE);
-            buyAllButton.setText("Buy Selected (" + selectedProductIds.size() + ")");
+            buyAllButton.setText("Subscribe Selected (" + selectedProductIds.size() + ")");
         }
     }
 
@@ -296,8 +302,11 @@ public class MainActivity extends AppCompatActivity implements BillingServiceCli
 
   private int getDrawableProductImageForProductId(String productId) {
       return switch (productId) {
+        case SUBS_PRODUCT_01 -> R.drawable.consumable_product_01;
         case SUBS_PRODUCT_02 -> R.drawable.consumable_product_02;
         case ADDON_SUBS_PRODUCT_01 -> R.drawable.consumable_product_03;
+        case ADDON_SUBS_PRODUCT_02 -> R.drawable.consumable_product_04;
+        case ADDON_SUBS_PRODUCT_03 -> R.drawable.consumable_product_05;
         default -> R.drawable.consumable_product_01;
       };
   }

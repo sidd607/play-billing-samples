@@ -4,7 +4,7 @@
     "type": "OPTIMIZED_PROCESSED_RES",
     "kind": "Directory"
   },
-  "applicationId": "com.dynamic.sku.test.app",
+  "applicationId": "com.play.billing.samples.preorder",
   "variantName": "release",
   "elements": [
     {

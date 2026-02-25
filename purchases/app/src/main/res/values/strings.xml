@@ -33,7 +33,7 @@
     <string name="codelab_url" translatable="false">https://codelabs.developers.google.com/play-billing-analyze-product-purchase-drop-offs</string>
     <string name="buy_button">Buy Products</string>
     <string name="my_subscriptions_title">My Subscriptions</string>
-    <string name="my_subscriptions_subtitle">Manage your active subscription plans</string>
+    <string name="my_subscriptions_subtitle">Add or remove subscription packages to update you current subscription bundle</string>
     <string name="update_subscriptions">Update Subscriptions</string>
     <string name="no_active_subscriptions">You have no active subscriptions</string>
 

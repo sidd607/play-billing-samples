@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.dynamic.sku.test.app",
+  "applicationId": "com.play.billing.samples.preorder",
   "variantName": "release",
   "elements": [
     {
