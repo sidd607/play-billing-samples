@@ -14,7 +14,25 @@
      limitations under the License.
 -->
 <resources>
-  <color name="colorPrimary">#6200EE</color>
-  <color name="colorPrimaryDark">#3700B3</color>
-  <color name="colorAccent">#03DAC5</color>
+    <color name="background_obsidian">#0E0E0E</color>
+    <color name="surface_low">#131313</color>
+    <color name="surface_high">#201F1F</color>
+    <color name="surface_highest">#262626</color>
+    <color name="primary_red">#FF8E80</color>
+    <color name="primary_red_container">#FF7668</color>
+    <color name="on_primary_red">#000000</color>
+    <color name="neon_cyan">#6FE0FF</color>
+    <color name="on_neon_cyan">#000000</color>
+    <color name="primary">@color/primary_red</color>
+    <color name="onPrimary">@color/on_primary_red</color>
+    <color name="primaryContainer">@color/primary_red_container</color>
+    <color name="tertiary">@color/neon_cyan</color>
+    <color name="onTertiary">@color/on_neon_cyan</color>
+    <color name="surface">@color/background_obsidian</color>
+    <color name="onSurface">#FFFFFF</color>
+    <color name="surfaceVariant">@color/surface_low</color>
+    <color name="onSurfaceVariant">#ADAAAA</color>
+    <color name="background">@color/background_obsidian</color>
+    <color name="onBackground">#FFFFFF</color>
+    <color name="outline">#484847</color>
 </resources>

@@ -1,10 +1,65 @@
 <resources>
-  <!-- Base application theme. -->
-  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-    <!-- Customize your theme here. -->
-    <item name="colorPrimary">@color/colorPrimary</item>
-    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-    <item name="colorAccent">@color/colorAccent</item>
-  </style>
-
+    <!-- Base application theme using Material 3 -->
+    <style
+        name="AppTheme"
+        parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
+        <item name="colorPrimaryContainer">@color/primaryContainer</item>
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorOnTertiary">@color/onTertiary</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/onSurface</item>
+        <item name="colorSurfaceVariant">@color/surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/onSurfaceVariant</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:statusBarColor">@color/background</item>
+    </style>
+    <style
+        name="TextAppearance.Editorial.Display"
+        parent="TextAppearance.Material3.DisplayMedium">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/primary_red</item>
+    </style>
+    <style
+        name="TextAppearance.Editorial.Title"
+        parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/onSurface</item>
+    </style>
+    <style
+        name="TextAppearance.Editorial.Label"
+        parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textColor">@color/onSurfaceVariant</item>
+    </style>
+    <style
+        name="TextAppearance.Editorial.BottomNavActive"
+        parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+    <style
+        name="TextAppearance.Editorial.BottomNavInactive"
+        parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+    <style
+        name="Widget.Editorial.Button"
+        parent="Widget.Material3.Button">
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/btn_primary_gradient</item>
+        <item name="android:textColor">@color/on_primary_red</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.MediumComponent</item>
+    </style>
 </resources>

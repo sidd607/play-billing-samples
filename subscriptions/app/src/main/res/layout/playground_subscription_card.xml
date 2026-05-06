@@ -1,0 +1,64 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tier_premium"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_width="match_parent"
+    app:cardBackgroundColor="@color/surface_highest"
+    app:cardCornerRadius="12dp"
+    app:strokeColor="@color/primary_red"
+    app:strokeWidth="0dp">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:baselineAligned="false"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="16dp">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/subscription_product_id"
+                style="@style/TextAppearance.Material3.TitleMedium"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/placeholder_subscription_id"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/subscription_base_plan"
+                style="@style/TextAppearance.Material3.BodyMedium"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/placeholder_subscription_baseplan"
+                android:textColor="@color/onSurfaceVariant" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="end"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/subscription_price"
+                style="@style/TextAppearance.Material3.TitleMedium"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/placeholder_subscription_price"
+                android:textColor="@color/primary"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/subscription_billing_period"
+                style="@style/TextAppearance.Material3.BodyMedium"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/placeholder_subscription_cycle"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

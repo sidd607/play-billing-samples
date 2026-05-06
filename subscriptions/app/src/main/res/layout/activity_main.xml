@@ -13,30 +13,61 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
     tools:context=".MainActivity">
-  <TextView
-      android:id="@+id/api_result"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Hello World!"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
-
-  <Button
-      android:id="@+id/api_button"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="32dp"
-      android:text="@android:string/ok"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/api_result" />
-
+    <androidx.core.widget.NestedScrollView
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="24dp">
+            <TextView
+                style="@style/TextAppearance.Editorial.Display"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/app_name" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                app:cardBackgroundColor="@color/surface_low"
+                app:cardCornerRadius="12dp"
+                app:strokeWidth="0dp">
+                <TextView
+                    style="@style/TextAppearance.Material3.BodyMedium"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:padding="16dp"
+                    android:text="@string/app_description"
+                    android:textColor="@color/onSurfaceVariant" />
+            </com.google.android.material.card.MaterialCardView>
+            <include layout="@layout/active_subscription_card" />
+            <TextView
+                style="@style/TextAppearance.Editorial.Title"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.1"
+                android:text="@string/explore_plans"
+                android:textColor="@color/primary" />
+            <LinearLayout
+                android:id="@+id/plans_container"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <include layout="@layout/bottom_navigation" />
 </androidx.constraintlayout.widget.ConstraintLayout>

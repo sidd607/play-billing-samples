@@ -57,9 +57,10 @@ dependencies {
     implementation 'com.google.android.material:material:1.13.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
     implementation 'com.google.android.gms:play-services-oss-licenses:17.1.0'
+    implementation 'com.google.guava:guava:33.6.0-android'
 
     // Play billing Library
-    implementation 'com.android.billingclient:billing:8.3.1'
+    implementation 'com.android.billingclient:billing:8.3.0'
 
     testImplementation 'junit:junit:4.13.2'
 

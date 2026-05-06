@@ -59,8 +59,16 @@ jetify_android_library(
     resource_files = glob(["app/src/main/res/**"]),
     deps = [
         "//java/com/google/android/libraries/play/billing/public/billing",
+        "//third_party/java/android_libs/guava_jdk5:collect",
+        "//third_party/java/android_libs/material_components:bottomnavigation",
+        "//third_party/java/android_libs/material_components:button",
+        "//third_party/java/android_libs/material_components:card",
+        "//third_party/java/android_libs/material_components:chip",
+        "//third_party/java/android_libs/material_components:dialog",
+        "//third_party/java/android_libs/material_components:theme",
         "//third_party/java/androidx/appcompat",
         "//third_party/java/androidx/constraintlayout",
+        "//third_party/java/androidx/core",
     ],
 )
 

@@ -1,3 +1,55 @@
-<resources>
-  <string name="app_name" translatable="false">Movies All Day</string>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="CharLimitMissing">
+    <!-- App name, shown in launcher and main screen title -->
+    <string
+        name="app_name"
+        translatable="false">Movies All Day</string>
+    <!-- App description, shown in main screen -->
+    <string name="app_description">The developer\'s guide to integrating with Google Play Billing\'s subscription logic. Test, swap and scale subscription replacements with ease. Built by developer for developers.</string>
+    <!-- Button text to view subscription in Play Store -->
+    <string name="view_in_play_store">View in Play Store</string>
+    <!-- Chip text indicating an active subscription -->
+    <string name="active">ACTIVE</string>
+    <!-- Label for the current subscription plan -->
+    <string name="current_plan">Current Plan</string>
+    <!-- Placeholder text for subscription name -->
+    <string name="subscription_name_placeholder">Standard Plan</string>
+    <!-- Button text for switching subscription -->
+    <string name="switch_button_text">SWITCH</string>
+    <!-- Header for section showing available plans -->
+    <string name="explore_plans">EXPLORE PLANS</string>
+    <!-- Button text for subscribing to a plan -->
+    <string name="subscribe_btn_text">SUBSCRIBE</string>
+    <!-- Title for Subscriptions tab in bottom navigation -->
+    <string name="nav_subscriptions">Subscriptions</string>
+    <!-- Title for Playground tab in bottom navigation -->
+    <string name="nav_playground">Playground</string>
+    <!-- Title for Playground screen -->
+    <string name="replacement_playground">Replacement Playground</string>
+    <!-- Header for subscriptions available for replacement -->
+    <string name="replacement_subs">Replacement Subscriptions</string>
+    <!-- Placeholder text for subscription ID -->
+    <string name="placeholder_subscription_id">subscription_premium</string>
+    <!-- Placeholder text for subscription base plan -->
+    <string name="placeholder_subscription_baseplan">monthly-auto-renewing</string>
+    <!-- Placeholder text for subscription price -->
+    <string name="placeholder_subscription_price">price</string>
+    <!-- Placeholder text for subscription billing cycle -->
+    <string name="placeholder_subscription_cycle">P1M</string>
+    <!-- Button text to add a custom subscription in Playground -->
+    <string name="add_custom_subscription">Add custom subscription</string>
+    <!-- Button text to test subscription replacement in Playground -->
+    <string name="btn_text_test_replacement">TEST REPLACEMENT</string>
+    <!-- Header within replacement playground to show subscriptions when no active subscription exists -->
+    <string name="text_subscriptions">SUBSCRIPTIONS</string>
+    <!-- Header for subscription replacement modes in Playground -->
+    <string name="replacement_modes">Replacement Modes</string>
+    <!-- Subtitle for Playground screen -->
+    <string name="replacement_playground_subtitle">Configure and test Google Play subscription replacement logic.</string>
+    <!-- Message shown when no active subscription is found in Replacement Playground-->
+    <string name="trigger_subscription_text">No active purchase found for the user, start by purchasing a subscription</string>
+    <!-- Hint text for Product ID input in dialog -->
+    <string name="dialog_product_id_input_hint">Product ID</string>
+    <!-- Hint text for Base Plan ID input in dialog -->
+    <string name="dialog_base_plan_id_input_hint">Base Plan ID (Optional)</string>
 </resources>
